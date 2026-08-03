@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Commander une livraison — B-SPEED Brazzaville</title>
+<meta name="description" content="Commandez votre livraison B-SPEED en ligne : formulaire simple, confirmation rapide, coursier en route.">
+<meta name="theme-color" content="#8A0F14">
+<link rel="icon" href="images/logo-blanc.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="page-interne">
+
+<a class="saut-contenu" href="#contenu">Aller au contenu</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo-lien" href="index.html">
+      <img src="images/logo-blanc.jpg" alt="Logo B-SPEED">
+      <span class="logo-texte">B-SPEED<small>La vitesse qui livre</small></span>
+    </a>
+    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">&#9776;</button>
+    <nav class="nav">
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="tarifs.html">Tarifs</a>
+      <a href="zones.html">Zones</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="contact.html">Contact</a>
+      <a href="commander.html" class="btn btn-vert">Commander</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenu">
+
+<section class="banniere">
+  <div class="wrap">
+    <p class="fil"><a href="index.html">Accueil</a> / Commander</p>
+    <h1>Commander une livraison</h1>
+    <p>Deux minutes pour remplir, quelques minutes pour être rappelé. Votre colis part ensuite.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="contact-grille" style="grid-template-columns:1.55fr 1fr">
+
+      <div class="form-carte reveal" id="form-commande">
+        <div class="form-message" id="form-message"></div>
+
+        <div class="form-etape-titre"><span>1</span> Vos coordonnées</div>
+        <div class="form-grille">
+          <div class="champ">
+            <label for="prenom">Prénom <span class="obl">*</span></label>
+            <input type="text" id="prenom" required autocomplete="given-name" placeholder="Prénom">
+            <span class="erreur-msg"></span>
+          </div>
+          <div class="champ">
+            <label for="nom">Nom <span class="obl">*</span></label>
+            <input type="text" id="nom" required autocomplete="family-name" placeholder="Nom">
+            <span class="erreur-msg"></span>
+          </div>
+          <div class="champ pleine">
+            <label for="telephone">Téléphone <span class="obl">*</span></label>
+            <input type="tel" id="telephone" required autocomplete="tel" placeholder="06 000 00 00">
+            <span class="aide">Nous vous rappelons sur ce numéro pour confirmer.</span>
+            <span class="erreur-msg"></span>
+          </div>
+        </div>
+
+        <div class="form-etape-titre"><span>2</span> Le trajet</div>
+        <div class="form-grille">
+          <div class="champ pleine">
+            <label for="depart">Adresse de récupération <span class="obl">*</span></label>
+            <input type="text" id="depart" required placeholder="Quartier, rue, point de repère…">
+            <span class="aide">Un point de repère connu aide beaucoup le coursier.</span>
+            <span class="erreur-msg"></span>
+          </div>
+          <div class="champ pleine">
+            <label for="arrivee">Adresse de livraison <span class="obl">*</span></label>
+            <input type="text" id="arrivee" required placeholder="Quartier, rue, point de repère…">
+            <span class="erreur-msg"></span>
+          </div>
+        </div>
+
+        <div class="form-etape-titre"><span>3</span> Le colis</div>
+        <div class="form-grille">
+          <div class="champ pleine">
+            <label for="colis">Description du colis <span class="obl">*</span></label>
+            <input type="text" id="colis" required placeholder="Ex. : dossier administratif, repas, colis vêtements…">
+            <span class="erreur-msg"></span>
+          </div>
+          <div class="champ">
+            <label for="poids">Poids estimé</label>
+            <select id="poids">
+              <option value="">Je ne sais pas</option>
+              <option>Moins de 1 kg</option>
+              <option>1 à 5 kg</option>
+              <option>5 à 10 kg</option>
+              <option>Plus de 10 kg</option>
+            </select>
+          </div>
+          <div class="champ">
+            <label for="date">Date souhaitée</label>
+            <input type="date" id="date">
+          </div>
+          <div class="champ pleine">
+            <label for="heure">Heure souhaitée</label>
+            <input type="time" id="heure">
+          </div>
+        </div>
+
+        <div class="form-etape-titre"><span>4</span> Votre formule</div>
+        <div class="form-grille">
+          <div class="choix-vitesse">
+            <label>
+              <input type="radio" name="vitesse" value="standard" checked>
+              <span class="contenu">
+                <span class="nom">Standard</span>
+                <span class="p">750 FCFA</span>
+                <span class="d">Non urgent</span>
+              </span>
+            </label>
+            <label>
+              <input type="radio" name="vitesse" value="express">
+              <span class="contenu">
+                <span class="nom">Express</span>
+                <span class="p">1 000 FCFA</span>
+                <span class="d">Urgent</span>
+              </span>
+            </label>
+            <label>
+              <input type="radio" name="vitesse" value="turbo">
+              <span class="contenu">
+                <span class="nom">Turbo</span>
+                <span class="p">1 500 FCFA</span>
+                <span class="d">Priorité maximale</span>
+              </span>
+            </label>
+          </div>
+          <div class="champ pleine">
+            <label for="instructions">Instructions supplémentaires</label>
+            <textarea id="instructions" placeholder="Colis fragile, appeler avant d'arriver, remettre uniquement à la personne concernée…"></textarea>
+          </div>
+        </div>
+
+        <button class="btn btn-vert btn-bloc btn-lg" id="btn-envoyer" style="margin-top:1.8rem" type="button">
+          Envoyer la commande
+        </button>
+        <p style="font-size:.83rem;color:var(--texte-doux);margin-top:.9rem;text-align:center">
+          Votre commande s'ouvre dans WhatsApp, prête à envoyer. Le tarif exact vous est confirmé avant le départ.
+        </p>
+      </div>
+
+      <aside>
+        <div class="recap reveal" style="position:sticky;top:100px">
+          <h4>Votre commande</h4>
+          <dl>
+            <dt>Formule</dt><dd id="recap-formule">Standard</dd>
+            <dt>Tarif</dt><dd id="recap-prix">à partir de 750 FCFA</dd>
+          </dl>
+
+          <div class="note-tarif" style="margin-top:1.2rem;font-size:.88rem">
+            Le prix final dépend de la distance et du poids. Il vous est confirmé par téléphone avant que le coursier ne parte.
+          </div>
+
+          <div style="margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid var(--gris-bord)">
+            <strong style="display:block;margin-bottom:.7rem">Vous préférez appeler ?</strong>
+            <a class="btn btn-ligne btn-bloc" href="tel:+242069619181" style="margin-bottom:.6rem">06 961 91 81</a>
+            <a class="btn btn-ligne btn-bloc" href="https://wa.me/242050490337" target="_blank" rel="noopener">WhatsApp direct</a>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<section class="section section-creme">
+  <div class="wrap">
+    <div class="section-tete center reveal">
+      <p class="eyebrow" style="justify-content:center">Ensuite</p>
+      <h2>Ce qui se passe après l'envoi</h2>
+    </div>
+    <div class="etapes">
+      <div class="etape reveal">
+        <div class="num">01</div>
+        <h3>Nous recevons</h3>
+        <p>Votre commande arrive directement sur le WhatsApp de notre équipe, avec un numéro de référence.</p>
+      </div>
+      <div class="etape reveal">
+        <div class="num">02</div>
+        <h3>Nous confirmons</h3>
+        <p>Un membre de l'équipe vous rappelle pour valider le tarif exact et le créneau de récupération.</p>
+      </div>
+      <div class="etape reveal">
+        <div class="num">03</div>
+        <h3>Le coursier part</h3>
+        <p>Un livreur identifié est affecté à votre course et se rend au point de récupération.</p>
+      </div>
+      <div class="etape reveal">
+        <div class="num">04</div>
+        <h3>Colis livré</h3>
+        <p>Remise en main propre au destinataire, puis confirmation de livraison de notre côté.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="logo-lien" href="index.html">
+          <img src="images/logo-blanc.jpg" alt="Logo B-SPEED" style="height:54px">
+          <span class="logo-texte">B-SPEED</span>
+        </a>
+        <p class="slogan">La vitesse qui livre !</p>
+        <p style="margin-top:1rem;font-size:.93rem">Startup spécialisée dans la livraison rapide et fiable à Brazzaville, pour les particuliers comme pour les entreprises.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="services.html">Nos services</a></li>
+          <li><a href="tarifs.html">Tarifs</a></li>
+          <li><a href="zones.html">Zones desservies</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Colis légers</a></li>
+          <li><a href="services.html">Food &amp; restaurants</a></li>
+          <li><a href="services.html">Service courrier</a></li>
+          <li><a href="services.html">Produits pharmaceutiques</a></li>
+          <li><a href="services.html">Livraison B2B</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+242069619181">📞 +242 06 961 91 81</a></li>
+          <li><a href="https://wa.me/242050490337" target="_blank" rel="noopener">💬 +242 05 049 03 37 (WhatsApp)</a></li>
+          <li>📍 Brazzaville, Congo 🇨🇬</li>
+        </ul>
+        <a class="btn btn-vert" style="margin-top:1rem" href="commander.html">Commander</a>
+      </div>
+    </div>
+    <div class="footer-bas">
+      <span>© <span data-annee></span> B-SPEED — Tous droits réservés.</span>
+      <span>Site réalisé par Moustapha Kouma</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-flottant" href="https://wa.me/242050490337" target="_blank" rel="noopener" aria-label="Nous écrire sur WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5 4.4.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2m0 18.2c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2"/></svg>
+</a>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
